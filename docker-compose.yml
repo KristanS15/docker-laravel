@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+  web:
+    container_name: ${APP_NAME}_web
+    build:
+      context: ./docker/web
+    ports:
+      - 9000:80
+    volumes:
+      - ./:/var/www/app
+  db:
+    container_name: ${APP_NAME}_db
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: docker-laravel
+    volumes:
+      - "./data:/var/lib/mysql:rw"
+  # cache:
+  #   container_name: ${APP_NAME}_cache
+  #   image: redis:4.0.11
+  #   ports:
+  #     - 63790:6379
