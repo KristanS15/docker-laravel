@@ -21,7 +21,7 @@ $ cp .env.example .env
 # create docker images and containers
 $ docker-compose up
 
-# check docker containers are running
+# in a new window: check docker containers are running
 $ docker-compose ps
 
 # check the database ip and potentially set the .env host 
@@ -29,6 +29,9 @@ $ docker inspect docker-laravel_db --format='{{range .NetworkSettings.Networks}}
 
 # connect to the docker container bash terminal
 $ docker exec -it docker-laravel_web /bin/bash
+
+# run composer install
+$ composer install
 
 # run migrations
 $ php artisan migrate
