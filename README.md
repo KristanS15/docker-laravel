@@ -15,6 +15,9 @@ $ git clone https://github.com/KristanS15/docker-laravel.git docker-laravel
 # go into app's directory
 $ cd docker-laravel
 
+# create env file
+$ cp .env.example .env
+
 # create docker images and containers
 $ docker-compose up
 
