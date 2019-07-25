@@ -30,6 +30,9 @@ $ docker inspect docker-laravel_db --format='{{range .NetworkSettings.Networks}}
 # connect to the docker container bash terminal
 $ docker exec -it docker-laravel_web /bin/bash
 
+# gerenate an encryption key
+$ php artisan key:generate
+
 # run composer install
 $ composer install
 
