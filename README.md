@@ -46,6 +46,9 @@ Go to http://localhost:9000 to view the site.
 You can also now connect to the database using:
 
 Host: 127.0.0.1
+
 Username: root
+
 Password: root
+
 Port: 3307
